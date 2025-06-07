@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Carrosserie Leopold AG</title>
+    <style>
+        :root {
+            --primary: #002f6c;
+            --background: #ffffff;
+            --text: #000000;
+            --secondary: #f0f0f0;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body {
+            background: url('website-background.png') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 2rem;
+            z-index: 1000;
+        }
+        nav .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: white;
+        }
+            top: 0;
+            width: 100%;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            margin: 0;
+        }
+            display: flex;
+            padding: 1rem;
+        }
+        nav li {
+            margin: 0 15px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #002f6c;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            border-bottom: 2px solid #002f6c;
+        }
+        header {
+            background: url('https://images.unsplash.com/photo-1605902711622-cfb43c4437d4?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        header h1 {
+            color: var(--primary);
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+        }
+        header p {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+        }
+        header a.cta {
+            background-color: #f8f9fa;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        header a.cta:hover {
+            background-color: #ff4d5e;
+        }
+        section {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        section h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        .services ul {
+            list-style: none;
+            padding: 0;
+        }
+        .services li {
+            background-color: var(--secondary);
+            margin-bottom: 10px;
+            padding: 15px;
+            border-left: 5px solid var(--primary); background-color: var(--secondary);
+            transition: transform 0.3s ease;
+        }
+        .services li:hover {
+            transform: scale(1.02);
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #f8f9fa; color: white;
+            color: #777;
+        }
+        a.contact-link {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            header h1 {
+            color: var(--primary);
+                font-size: 2.2rem;
+            }
+            header p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    
+    <ul>
+        <li><a href="#start">Start</a></li>
+        <li><a href="#leistungen">Leistungen</a></li>
+        <li><a href="#ueberuns">Über uns</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+</nav>
+
+<header id="start">
+    <h1>Carrosserie Leopold AG</h1>
+    <p>Wo Blech auf Präzision trifft</p>
+    <a href="#kontakt" class="cta">Jetzt Kontakt aufnehmen</a>
+</header>
+
+<section id="leistungen" class="services">
+    <h2>Unsere Leistungen</h2>
+    <ul>
+        <li>Schadenfälle – von kleinen Kratzern bis zu großen Unfällen</li>
+        <li>Frontscheiben ersetzen & reparieren</li>
+        <li>Spezialisiert auf Beulendrücktechnik (Dellentechnik)</li>
+        <li>Kompletter Fahrzeug-Service</li>
+        <li>Professionelle Lackierungen & Farbangleichung</li>
+        
+        <li>Direkte Abwicklung mit Versicherungen</li>
+    </ul>
+</section>
+
+<section id="ueberuns">
+    <h2>Über uns</h2>
+    <p>Als familiengeführte Werkstatt stehen wir seit vielen Jahren für echtes Handwerk, saubere Arbeit und ehrliche Kommunikation. Unser Team liebt, was es tut – und das sieht man jedem Projekt an.</p>
+</section>
+
+<section id="kontakt">
+    <h2>Kontakt & Standort</h2>
+    <p>📍 Adresse: <a class="contact-link" href="https://www.google.com/maps/search/?api=1&query=Bahnhofstrasse+9,+9443+Widnau" target="_blank">Bahnhofstrasse 9, 9443 Widnau</a></p>
+    <p>📞 Telefon: <a class="contact-link" href="tel:+41717440404">071 744 04 04</a></p>
+    <p>✉️ E-Mail: <a class="contact-link" href="mailto:carrosserieleopold@bluewin.ch">carrosserieleopold@bluewin.ch</a></p>
+    <p>🕒 Öffnungszeiten:<br>Mo–Do: 07:30–12:00 / 13:00–17:30<br>Fr: 07:30–12:00 / 13:00–16:30</p>
+</section>
+
+<footer>
+    © 2025 Carrosserie Leopold AG – Alle Rechte vorbehalten
+
+
+
+</footer>
+
+</body>
+</html>
