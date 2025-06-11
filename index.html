@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Carrosserie Leopold AG</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -21,7 +25,7 @@
       border-bottom: 1px solid #ccc;
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 1000;
     }
 
     .logo {
@@ -33,6 +37,9 @@
     .hamburger {
       font-size: 1.5rem;
       cursor: pointer;
+      background: none;
+      border: none;
+      color: #003366;
     }
 
     nav {
@@ -43,6 +50,7 @@
       border: 1px solid #ccc;
       display: none;
       flex-direction: column;
+      min-width: 200px;
     }
 
     nav a {
@@ -50,6 +58,10 @@
       text-decoration: none;
       color: #003366;
       border-bottom: 1px solid #eee;
+    }
+
+    nav a:hover {
+      background-color: #f2f2f2;
     }
 
     nav.show {
@@ -69,7 +81,7 @@
       font-size: 2rem;
       margin-bottom: 1rem;
       color: #003366;
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: rgba(255, 255, 255, 0.85);
       display: inline-block;
       padding: 0.5rem 1rem;
       border-radius: 5px;
@@ -78,30 +90,16 @@
     .hero p {
       font-size: 1.2rem;
       margin-bottom: 2rem;
-      background-color: rgba(255, 255, 255, 0.8);
+      background-color: rgba(255, 255, 255, 0.85);
       color: #003366;
       display: inline-block;
       padding: 0.3rem 1rem;
       border-radius: 5px;
     }
 
-    .cta-button {
-      background-color: #003366;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .cta-button:hover {
-      background-color: #005588;
-    }
-
     main {
       padding: 2rem;
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
     }
 
@@ -135,6 +133,22 @@
       max-width: 100%;
       border: none;
     }
+
+    @media (min-width: 768px) {
+      nav {
+        position: static;
+        display: flex !important;
+        flex-direction: row;
+        border: none;
+      }
+      .hamburger {
+        display: none;
+      }
+      nav a {
+        border: none;
+        padding: 0 1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -142,7 +156,7 @@
   <!-- Header -->
   <header>
     <div class="logo">Carrosserie Leopold AG</div>
-    <div class="hamburger" onclick="toggleNav()">☰</div>
+    <button class="hamburger" onclick="toggleNav()">☰</button>
     <nav id="navMenu">
       <a href="#lack">Carrosserie &amp; Lack</a>
       <a href="#service">Service &amp; Räder</a>
@@ -167,8 +181,13 @@
     <!-- Instagram Feed -->
     <section id="instagram">
       <h2>Einblicke auf Instagram</h2>
-      <iframe src="https://snapwidget.com/embed/1048211" class="instagram-media" allowtransparency="true" frameborder="0" scrolling="no" style="width:100%; height: 500px;"></iframe>
-      <!-- Hinweis: Dies ist ein Demo-Embed von SnapWidget. Bitte bei SnapWidget oder einem anderen Tool deinen echten Feed erstellen. -->
+      <iframe src="https://snapwidget.com/embed/15df8481565a596e88627a22a1006679" 
+              class="instagram-media" 
+              allowtransparency="true" 
+              frameborder="0" 
+              scrolling="no" 
+              style="width:100%; height: 500px;">
+      </iframe>
     </section>
 
     <!-- Kontakt -->
@@ -196,7 +215,8 @@
 
   <script>
     function toggleNav() {
-      document.getElementById('navMenu').classList.toggle('show');
+      const nav = document.getElementById('navMenu');
+      nav.classList.toggle('show');
     }
   </script>
 </body>
