@@ -12,7 +12,6 @@
       color: #333;
     }
 
-    /* HEADER */
     header {
       display: flex;
       justify-content: space-between;
@@ -57,10 +56,8 @@
       display: flex;
     }
 
-    /* HERO */
     .hero {
       background: linear-gradient(to right, #003366, #005588);
-      color: white;
       text-align: center;
       padding: 5rem 2rem;
       background-image: url('https://images.unsplash.com/photo-1571607388064-d4733f9311df');
@@ -71,8 +68,8 @@
     .hero h1 {
       font-size: 2rem;
       margin-bottom: 1rem;
-      color: #003366; /* Dunkelblau */
-      background-color: rgba(255, 255, 255, 0.8); /* Sichtbarkeit auf Bild */
+      color: #003366;
+      background-color: rgba(255, 255, 255, 0.8);
       display: inline-block;
       padding: 0.5rem 1rem;
       border-radius: 5px;
@@ -102,7 +99,6 @@
       background-color: #005588;
     }
 
-    /* MAIN CONTENT */
     main {
       padding: 2rem;
       max-width: 800px;
@@ -117,17 +113,13 @@
       color: #003366;
     }
 
-    ul {
-      padding-left: 1.2rem;
+    .map {
+      margin-top: 1rem;
+      height: 300px;
     }
 
     .contact p {
       margin: 0.25rem 0;
-    }
-
-    .map {
-      margin-top: 1rem;
-      height: 300px;
     }
 
     footer {
@@ -136,6 +128,12 @@
       background: #f9f9f9;
       border-top: 1px solid #ddd;
       font-size: 0.9rem;
+    }
+
+    iframe.instagram-media {
+      width: 100%;
+      max-width: 100%;
+      border: none;
     }
   </style>
 </head>
@@ -148,48 +146,29 @@
     <nav id="navMenu">
       <a href="#lack">Carrosserie &amp; Lack</a>
       <a href="#service">Service &amp; Räder</a>
-      <a href="#unternehmen">Unternehmen</a>
-      <a href="#kontakt">Kontakt</a>
     </nav>
   </header>
 
-  <!-- Hero Startseite -->
+  <!-- Hero -->
   <section class="hero">
     <h1>Wir bringen ihr Auto zurück auf die Straße – stark, schön, sicher.</h1>
     <p>Carrosserie &amp; Service mit Herzblut in Widnau.</p>
-    <a href="#lack" class="cta-button">Jetzt entdecken</a>
   </section>
 
-  <!-- Hauptinhalt -->
   <main>
-    <!-- Carrosserie & Lack -->
-    <section id="lack">
-      <h2>Carrosserie &amp; Lack</h2>
-      <p><strong>Carrosserie Leopold – Leidenschaft fürs Detail. Kompetenz fürs Ganze.</strong></p>
-      <p>Ob kleiner Parkschaden oder massiver Blechschaden – bei Carrosserie Leopold ist ihr Auto in den besten Händen. Wir sind ihr zuverlässiger Partner für sämtliche Carrosseriearbeiten, Frontscheibenwechsel und professionelle Beulendrücktechnik – alles aus einer Hand, mit Herzblut und Präzision.</p>
-      <p><strong>Unser Anspruch?</strong> Schnell, sauber und nachhaltig reparieren – damit Sie sich wieder rundum sicher und wohl in Ihrem Fahrzeug fühlen. Dank modernster Techniken und langjähriger Erfahrung holen wir selbst aus schwierigen Fällen das Beste heraus.</p>
-    </section>
-
-    <!-- Service & Räder -->
-    <section id="service">
-      <h2>Service &amp; Räder</h2>
-      <p><strong>Service &amp; Räder – damit alles rund läuft</strong></p>
-      <p>Ein Auto muss nicht nur gut aussehen – es muss auch zuverlässig funktionieren. Deshalb bekommen Sie bei Carrosserie Leopold nicht nur Top-Arbeit an der Carrosserie, sondern auch einen kompletten Fahrzeugservice aus einer Hand.</p>
-      <ul>
-        <li>Räderwechsel &amp; Reifenlagerung</li>
-        <li>Bremsen, Ölservice &amp; Fahrwerk</li>
-        <li>Flüssigkeiten &amp; Filter</li>
-        <li>Umfangreiche Wartungen</li>
-      </ul>
-      <p>→ Für Ihre Sicherheit. Für Ihren Fahrspaß.</p>
-    </section>
-
     <!-- Unternehmen -->
     <section id="unternehmen">
       <h2>Unternehmen</h2>
-      <p><strong>Carrosserie Leopold AG – seit [Gründungsjahr]</strong></p>
-      <p>Als regional verankertes Unternehmen stehen wir seit Jahren für Qualität, Verlässlichkeit und eine ehrliche Handschlags-Mentalität.<br>
+      <p><strong>Carrosserie Leopold AG – seit 2001</strong></p>
+      <p>Als regional verankertes Unternehmen stehen wir seit über zwei Jahrzehnten für Qualität, Verlässlichkeit und eine ehrliche Handschlags-Mentalität.<br>
       Unser Team besteht aus erfahrenen Fachleuten, die ihr Handwerk lieben und leben.</p>
+    </section>
+
+    <!-- Instagram Feed -->
+    <section id="instagram">
+      <h2>Einblicke auf Instagram</h2>
+      <iframe src="https://snapwidget.com/embed/1048211" class="instagram-media" allowtransparency="true" frameborder="0" scrolling="no" style="width:100%; height: 500px;"></iframe>
+      <!-- Hinweis: Dies ist ein Demo-Embed von SnapWidget. Bitte bei SnapWidget oder einem anderen Tool deinen echten Feed erstellen. -->
     </section>
 
     <!-- Kontakt -->
