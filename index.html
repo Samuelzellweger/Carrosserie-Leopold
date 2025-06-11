@@ -8,65 +8,119 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      background-color: #ffffff;
       color: #333;
-      background: #fff;
     }
+
+    /* HEADER */
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
-      background: #fff;
-      border-bottom: 1px solid #ddd;
+      background-color: #ffffff;
+      border-bottom: 1px solid #ccc;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
+
     .logo {
       font-size: 1.5rem;
       font-weight: bold;
-      color: #003366; /* dunkles Blau */
+      color: #003366;
     }
+
     .hamburger {
       font-size: 1.5rem;
       cursor: pointer;
     }
+
     nav {
       position: absolute;
       top: 60px;
       right: 2rem;
-      background: #fff;
-      border: 1px solid #ddd;
+      background: #ffffff;
+      border: 1px solid #ccc;
       display: none;
       flex-direction: column;
     }
+
     nav a {
       padding: 0.75rem 1.5rem;
       text-decoration: none;
       color: #003366;
       border-bottom: 1px solid #eee;
     }
-    nav a:last-child {
-      border-bottom: none;
-    }
+
     nav.show {
       display: flex;
     }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(to right, #003366, #005588);
+      color: white;
+      text-align: center;
+      padding: 5rem 2rem;
+      background-image: url('https://images.unsplash.com/photo-1571607388064-d4733f9311df'); /* Beispielbild */
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .cta-button {
+      background-color: #003366;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .cta-button:hover {
+      background-color: #005588;
+    }
+
+    /* MAIN CONTENT */
     main {
       padding: 2rem;
       max-width: 800px;
       margin: 0 auto;
     }
+
     section {
       margin-bottom: 3rem;
     }
+
     section h2 {
       color: #003366;
     }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
     .contact p {
       margin: 0.25rem 0;
     }
+
     .map {
       margin-top: 1rem;
       height: 300px;
     }
+
     footer {
       text-align: center;
       padding: 1rem;
@@ -78,7 +132,7 @@
 </head>
 <body>
 
-  <!-- Header mit Logo und Menü -->
+  <!-- Header -->
   <header>
     <div class="logo">Carrosserie Leopold AG</div>
     <div class="hamburger" onclick="toggleNav()">☰</div>
@@ -90,14 +144,15 @@
     </nav>
   </header>
 
-  <main>
-    <!-- Startseite / Hero -->
-    <section id="home">
-      <h1>Carrosserie Leopold AG – Dein Auto. Unsere Leidenschaft.</h1>
-      <p>Willkommen bei Carrosserie Leopold in Widnau. Ob Reparatur, Service oder Beratung – wir kümmern uns persönlich, präzise und zuverlässig um dein Fahrzeug.</p>
-      <p><a href="#lack">→ Zu unseren Leistungen</a></p>
-    </section>
+  <!-- Hero Startseite -->
+  <section class="hero">
+    <h1>Wir bringen dein Auto zurück auf die Straße – stark, schön, sicher.</h1>
+    <p>Carrosserie &amp; Service mit Herzblut in Widnau.</p>
+    <a href="#lack" class="cta-button">Jetzt entdecken</a>
+  </section>
 
+  <!-- Hauptinhalt -->
+  <main>
     <!-- Carrosserie & Lack -->
     <section id="lack">
       <h2>Carrosserie &amp; Lack</h2>
@@ -128,7 +183,7 @@
       Unser Team besteht aus erfahrenen Fachleuten, die ihr Handwerk lieben und leben.</p>
     </section>
 
-    <!-- Kontakt mit Karte -->
+    <!-- Kontakt -->
     <section id="kontakt" class="contact">
       <h2>Kontakt</h2>
       <p><strong>Adresse:</strong><br>
@@ -156,6 +211,6 @@
       document.getElementById('navMenu').classList.toggle('show');
     }
   </script>
-
 </body>
-</html>
+</html> {
+      
