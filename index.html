@@ -4,134 +4,158 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Carrosserie Leopold AG</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --primary: #002f6c;
-      --light: #ffffff;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--light);
-      color: var(--primary);
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+      background: #fff;
     }
-
-    nav {
-      background: var(--primary);
-      padding: 1.5rem 2rem;
+    header {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 1rem 2rem;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
     }
-
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #003366; /* dunkles Blau */
+    }
+    .hamburger {
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    nav {
+      position: absolute;
+      top: 60px;
+      right: 2rem;
+      background: #fff;
+      border: 1px solid #ddd;
+      display: none;
+      flex-direction: column;
+    }
     nav a {
-      color: var(--light);
+      padding: 0.75rem 1.5rem;
       text-decoration: none;
-      font-weight: 600;
-      margin-left: 2rem;
+      color: #003366;
+      border-bottom: 1px solid #eee;
     }
-
-    .hero {
-      padding: 5rem 2rem;
-      text-align: center;
-      background: linear-gradient(to right, #002f6c, #004e9a);
-      color: white;
+    nav a:last-child {
+      border-bottom: none;
     }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+    nav.show {
+      display: flex;
     }
-
-    .hero p {
-      font-size: 1.2rem;
-    }
-
-    section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-    }
-
-    iframe {
-      width: 100%;
-      height: 400px;
-      border: none;
-      border-radius: 8px;
-    }
-
-    footer {
-      background: #002f6c;
-      color: white;
-      text-align: center;
+    main {
       padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
     }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 1rem;
+    section {
+      margin-bottom: 3rem;
     }
-
-    .gallery img {
-      width: 100%;
-      border-radius: 8px;
+    section h2 {
+      color: #003366;
+    }
+    .contact p {
+      margin: 0.25rem 0;
+    }
+    .map {
+      margin-top: 1rem;
+      height: 300px;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #f9f9f9;
+      border-top: 1px solid #ddd;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
 
-<nav>
-  <strong style="color:white;">Carrosserie Leopold</strong>
-  <div>
-    <a href="#kontakt">Kontakt</a>
-    <a href="#galerie">Galerie</a>
-    <a href="https://www.instagram.com/carrosserieleopold?igsh=MTlnYzBqYW84YXdrOA%3D%3D&utm_source=qr" target="_blank">Instagram</a>
-  </div>
-</nav>
+  <!-- Header mit Logo und Menü -->
+  <header>
+    <div class="logo">Carrosserie Leopold AG</div>
+    <div class="hamburger" onclick="toggleNav()">☰</div>
+    <nav id="navMenu">
+      <a href="#lack">Carrosserie &amp; Lack</a>
+      <a href="#service">Service &amp; Räder</a>
+      <a href="#unternehmen">Unternehmen</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
 
-<div class="hero">
-  <h1>Carrosserie Leopold AG</h1>
-  <p>Karosserie & Lack – mit Leidenschaft und Präzision.</p>
-</div>
+  <main>
+    <!-- Startseite / Hero -->
+    <section id="home">
+      <h1>Carrosserie Leopold AG – Dein Auto. Unsere Leidenschaft.</h1>
+      <p>Willkommen bei Carrosserie Leopold in Widnau. Ob Reparatur, Service oder Beratung – wir kümmern uns persönlich, präzise und zuverlässig um dein Fahrzeug.</p>
+      <p><a href="#lack">→ Zu unseren Leistungen</a></p>
+    </section>
 
-<section id="kontakt">
-  <h2>Kontakt</h2>
-  <p><strong>Adresse:</strong> Bahnhofstrasse 9, 9443 Widnau</p>
-  <p><strong>Telefon:</strong> <a href="tel:+41717440404">071 744 04 04</a></p>
-  <p><strong>E-Mail:</strong> <a href="mailto:carrosserieleopold@bluewin.ch">carrosserieleopold@bluewin.ch</a></p>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2762.772560558967!2d9.62964!3d47.40264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479af55a9d3adbb3%3A0x6ec0cd91f1d270c3!2sBahnhofstrasse%209%2C%209443%20Widnau%2C%20Switzerland!5e0!3m2!1sen!2sch!4v1700000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</section>
+    <!-- Carrosserie & Lack -->
+    <section id="lack">
+      <h2>Carrosserie &amp; Lack</h2>
+      <p><strong>Carrosserie Leopold – Leidenschaft fürs Detail. Kompetenz fürs Ganze.</strong></p>
+      <p>Ob kleiner Parkschaden oder massiver Blechschaden – bei Carrosserie Leopold ist dein Auto in den besten Händen. Wir sind dein zuverlässiger Partner für sämtliche Carrosseriearbeiten, Frontscheibenwechsel und professionelle Beulendrücktechnik – alles aus einer Hand, mit Herzblut und Präzision.</p>
+      <p><strong>Unser Anspruch?</strong> Schnell, sauber und nachhaltig reparieren – damit du dich wieder rundum sicher und wohl in deinem Fahrzeug fühlst. Dank modernster Techniken und langjähriger Erfahrung holen wir selbst aus schwierigen Fällen das Beste heraus.</p>
+    </section>
 
-<section id="galerie">
-<h2>Galerie</h2>
-<div class="gallery">
-  <img src="img1.jpg" alt="Carrosserie Bild">
-  <img src="img2.jpg" alt="Carrosserie Bild">
-  <img src="img3.jpg" alt="Carrosserie Bild">
-  <img src="img4.jpg" alt="Carrosserie Bild">
-  <img src="img5.jpg" alt="Carrosserie Bild">
-  <img src="img6.jpg" alt="Carrosserie Bild">
-  <img src="img7.jpg" alt="Carrosserie Bild">
-  <img src="img8.jpg" alt="Carrosserie Bild">
-</div>
-</section>
+    <!-- Service & Räder -->
+    <section id="service">
+      <h2>Service &amp; Räder</h2>
+      <p><strong>Service &amp; Räder – damit alles rund läuft</strong></p>
+      <p>Ein Auto muss nicht nur gut aussehen – es muss auch zuverlässig funktionieren. Deshalb bekommst du bei Carrosserie Leopold nicht nur Top-Arbeit an der Carrosserie, sondern auch einen kompletten Fahrzeugservice aus einer Hand.</p>
+      <ul>
+        <li>Räderwechsel &amp; Reifenlagerung</li>
+        <li>Bremsen, Ölservice &amp; Fahrwerk</li>
+        <li>Flüssigkeiten &amp; Filter</li>
+        <li>Umfangreiche Wartungen</li>
+      </ul>
+      <p>→ Für deine Sicherheit. Für deinen Fahrspaß.</p>
+    </section>
 
-<footer>
-  &copy; 2025 Carrosserie Leopold AG – alle Rechte vorbehalten.
-</footer>
+    <!-- Unternehmen -->
+    <section id="unternehmen">
+      <h2>Unternehmen</h2>
+      <p><strong>Carrosserie Leopold AG – seit [Gründungsjahr]</strong></p>
+      <p>Als regional verankertes Unternehmen stehen wir seit Jahren für Qualität, Verlässlichkeit und eine ehrliche Handschlags‑Mentalität.<br>
+      Unser Team besteht aus erfahrenen Fachleuten, die ihr Handwerk lieben und leben.</p>
+    </section>
+
+    <!-- Kontakt mit Karte -->
+    <section id="kontakt" class="contact">
+      <h2>Kontakt</h2>
+      <p><strong>Adresse:</strong><br>
+      Bahnhofstrasse 9<br>
+      9443 Widnau</p>
+      <p><strong>E‑Mail:</strong> <a href="mailto:carrosserieleopold@bluewin.ch">carrosserieleopold@bluewin.ch</a></p>
+      <p><strong>Telefon:</strong> <a href="tel:0717440404">071 744 04 04</a></p>
+
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps?q=9443+Widnau+Bahnhofstrasse+9&output=embed"
+          width="100%" height="100%" style="border:0;"
+          allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Carrosserie Leopold AG – alle Rechte vorbehalten.
+  </footer>
+
+  <script>
+    function toggleNav() {
+      document.getElementById('navMenu').classList.toggle('show');
+    }
+  </script>
 
 </body>
 </html>
